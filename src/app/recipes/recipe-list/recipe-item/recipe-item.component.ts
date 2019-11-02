@@ -9,7 +9,7 @@ import { Recipe } from '../../recipe.modle';
 export class RecipeItemComponent implements OnInit {
 
   @Input() recipe: Recipe;
-  @Output() recipeSelected = new EventEmitter<void>();
+  // @Output() recipeSelected = new EventEmitter<void>();
 
   constructor() { }
 
