@@ -14,7 +14,7 @@ export class ShoppingEditComponent implements OnInit {
 
   // @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
-  constructor(private shoppingListService: ShoppingListService) { }
+  constructor( private shoppingListService: ShoppingListService ) { }
 
   ngOnInit() {
   }
@@ -25,7 +25,7 @@ export class ShoppingEditComponent implements OnInit {
       const newIngredient = new Ingredient( ingName, ingAmount );
 
       // this.ingredientAdded.emit(newIngredient);
-      this.shoppingListService.addIngredient(newIngredient);
+      this.shoppingListService.addIngredient( newIngredient );
   }
 
 }

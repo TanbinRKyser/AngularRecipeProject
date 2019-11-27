@@ -13,8 +13,8 @@ export class RecipeService {
                 'Sample',
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Guacomole.jpg/1920px-Guacomole.jpg',
                 [
-                  new Ingredient('Meat',1),
-                  new Ingredient('French Fires',20)
+                  new Ingredient('Meat', 1),
+                  new Ingredient('French Fires', 20)
                 ]
               ),
     new Recipe( 'Chicken Tacos',
@@ -35,7 +35,7 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
-  addIngredientsToShoppingList( ingredients : Ingredient[]) {
+  addIngredientsToShoppingList( ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients( ingredients );
   }
 }
