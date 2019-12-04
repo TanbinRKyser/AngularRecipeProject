@@ -38,8 +38,21 @@
             class="btn btn-success"
             type="submit"
             [disabled]="!f.valid">{{ editMode ? 'Update' : 'Add'}}</button>
-          <button class="btn btn-danger" type="button" style="margin-left: 4px; margin-right: 4px;">Delete</button>
-          <button class="btn btn-primary" type="button">Clear</button>
+          <!-- <button class="btn btn-danger" type="button" style="margin-left: 4px; margin-right: 4px;">Delete</button> -->
+          <button
+            class="btn btn-danger"
+            type="button"
+            *ngIf="editMode"
+            (click)="onDelete()"
+            style="margin-left: 4px; margin-right: 4px;">Delete
+          </button>
+          <!-- <button class="btn btn-primary" type="button">Clear</button> -->
+          <button
+            class="btn btn-primary"
+            type="button"
+            (click)="onCLear()"
+            style="margin-left: 4px; margin-right: 4px;">Clear
+          </button>
         </div>
       </div>
 
