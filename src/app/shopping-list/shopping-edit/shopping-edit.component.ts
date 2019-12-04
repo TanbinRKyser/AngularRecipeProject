@@ -12,7 +12,7 @@ import { ShoppingListService } from '../shopping-list.service';
   templateUrl: './shopping-edit.component.html',
   styleUrls: ['./shopping-edit.component.css']
 })
-export class ShoppingEditComponent implements OnInit,OnDestroy {
+export class ShoppingEditComponent implements OnInit, OnDestroy {
 
   // @ViewChild('nameInput', {static: true}) nameInputRef: ElementRef;
   // @ViewChild('amountInput', {static: true}) amountInputRef: ElementRef;
@@ -51,11 +51,16 @@ export class ShoppingEditComponent implements OnInit,OnDestroy {
       // this.ingredientAdded.emit(newIngredient);
       this.shoppingListService.addIngredient( newIngredient );
   } */
+
   onAddItem( form: NgForm ) {
     const value = form.value;
     const newIngredient = new Ingredient( value.name, value.amount );
 
-    this.shoppingListService.addIngredient( newIngredient );
+    if ( this.editMode ) {
+      this.shoppingListService.updateIngredients( this.editItemIndex, newIngredient );
+    } else {
+      this.shoppingListService.addIngredient( newIngredient );
+    }
   }
 
   ngOnDestroy() {
