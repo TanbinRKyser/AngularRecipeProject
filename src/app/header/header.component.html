@@ -22,7 +22,7 @@
         </ng-template>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><a class="nav-link" style="cursor: ;" (click)="onLogout()" *ngIf="authService.isAuthenticated()">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" style="cursor: pointer;" (click)="onLogout()" *ngIf="authService.isAuthenticated()">Logout</a></li>
       </ul>
       <ul class="nav navbar-nav" *ngIf="authService.isAuthenticated()">
         <li class="nav-item dropdown" appDropdown>
