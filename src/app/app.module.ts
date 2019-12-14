@@ -18,6 +18,7 @@ import { RecipeService } from './recipes/recipe.service';
 import { DataStorageService } from './shared/data-storage.service';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -25,11 +26,12 @@ import { AuthGuard } from './auth/auth-guard.service';
     AppComponent,
     HeaderComponent,
     DropdownDirective,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RecipesModule,
+    // RecipesModule,
     ShoppingListModule,
     AuthFeatureModule,
     AppRoutingModule
