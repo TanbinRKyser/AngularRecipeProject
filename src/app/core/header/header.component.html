@@ -16,15 +16,15 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <ng-template [ngIf] = "!authService.isAuthenticated()">
+        <ng-template [ngIf] = "!isAuthenticated()">
           <li class="nav-item"><a class="nav-link" routerLink="/signup" routerLinkActive="router-link-active" >Register</a></li>
           <li class="nav-item"><a class="nav-link" routerLink="/signin" routerLinkActive="router-link-active" >Login</a></li>
         </ng-template>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><a class="nav-link" style="cursor: pointer;" (click)="onLogout()" *ngIf="authService.isAuthenticated()">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" style="cursor: pointer;" (click)="onLogout()" *ngIf="isAuthenticated()">Logout</a></li>
       </ul>
-      <ul class="nav navbar-nav" *ngIf="authService.isAuthenticated()">
+      <ul class="nav navbar-nav" *ngIf="isAuthenticated()">
         <li class="nav-item dropdown" appDropdown>
           <!-- <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Manage</a> -->
           <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" style="cursor: pointer;">
