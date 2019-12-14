@@ -19,13 +19,14 @@ import { DataStorageService } from './shared/data-storage.service';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { HomeComponent } from './home/home.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DropdownDirective,
+    // DropdownDirective,
     HomeComponent,
   ],
   imports: [
@@ -34,7 +35,8 @@ import { HomeComponent } from './home/home.component';
     // RecipesModule,
     ShoppingListModule,
     AuthFeatureModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
